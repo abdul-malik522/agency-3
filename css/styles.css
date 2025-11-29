@@ -9120,3 +9120,216 @@ img {
     grid-column-end: 7;
   }
 }
+/* Mobile Optimization Fixes */
+@media screen and (max-width: 767px) {
+  /* Fix container padding on mobile */
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Fix section spacing */
+  .section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Fix card spacing and padding */
+  .card {
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+  }
+
+  .card_body {
+    padding: 20px !important;
+  }
+
+  /* Fix heading sizes on mobile */
+  h1, .heading_h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+
+  h2, .heading_h2 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+  }
+
+  h3, .heading_h3 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Fix button spacing */
+  .button-group {
+    gap: 12px !important;
+    margin-top: 20px !important;
+  }
+
+  .button {
+    padding: 14px 24px !important;
+    font-size: 16px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Fix grid layouts on mobile */
+  .grid_2-col,
+  .grid_3-col,
+  .grid_4-col,
+  .grid_5-col {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Fix testimonial cards */
+  .card-link {
+    margin-bottom: 16px !important;
+  }
+
+  /* Fix image spacing */
+  .image-ratio_1x1,
+  .image-ratio_3x2,
+  .image-ratio_auto {
+    margin-bottom: 16px !important;
+  }
+
+  /* Fix paragraph spacing */
+  p, .paragraph_large, .paragraph_small {
+    margin-bottom: 12px !important;
+    line-height: 1.6 !important;
+  }
+
+  .subheading {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Fix pricing cards */
+  .card .heading_h2 {
+    font-size: 36px !important;
+    margin: 12px 0 !important;
+  }
+
+  /* Fix list spacing */
+  ul, ol {
+    padding-left: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  li {
+    margin-bottom: 8px !important;
+  }
+
+  /* Fix eyebrow text */
+  .eyebrow {
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Fix divider spacing */
+  .divider {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Fix header spacing */
+  .header {
+    margin-bottom: 24px !important;
+  }
+
+  /* Fix max-width containers on mobile */
+  .max-width_small,
+  .max-width_medium,
+  .max-width_large {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Fix flex gaps */
+  .flex_horizontal,
+  .flex_vertical {
+    gap: 12px !important;
+  }
+
+  /* Prevent text overflow */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Fix nav spacing */
+  .nav_left {
+    padding: 16px 20px !important;
+  }
+
+  /* Fix footer spacing */
+  .footer {
+    padding: 40px 20px !important;
+  }
+
+  /* Fix icon sizes */
+  .icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .icon.is-medium {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Fix overlapping elements */
+  .position_relative {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Fix sticky cards on mobile */
+  .ix_sticky-card {
+    position: relative !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Fix backdrop filter cards */
+  .backdrop-filter_blur {
+    backdrop-filter: none !important;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 479px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .section {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  h1, .heading_h1 {
+    font-size: 28px !important;
+  }
+
+  h2, .heading_h2 {
+    font-size: 24px !important;
+  }
+
+  .card {
+    padding: 16px !important;
+  }
+
+  .card_body {
+    padding: 16px !important;
+  }
+
+  .button {
+    padding: 12px 20px !important;
+    font-size: 15px !important;
+  }
+}
