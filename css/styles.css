@@ -9397,3 +9397,282 @@ img {
     animation-delay: 0.4s !important;
   }
 }
+
+/* ========================================
+   NAVIGATION IMPROVEMENTS
+   ======================================== */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Enhanced Navigation Styling */
+.nav {
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Logo hover effect */
+.nav_left {
+  transition: transform 0.3s ease !important;
+}
+
+.nav_left:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Navigation menu items */
+.nav_link {
+  position: relative !important;
+  transition: all 0.3s ease !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+}
+
+/* Hover effect for nav links */
+.nav_link:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Active state underline animation */
+.nav_link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: #00ff88 !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+}
+
+.nav_link:hover::after {
+  width: 80% !important;
+}
+
+/* Dropdown menu improvements */
+.mega-nav_dropdown-list {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-10px) !important;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  background: rgba(20, 20, 30, 0.98) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 20px !important;
+  margin-top: 10px !important;
+}
+
+.w-dropdown-toggle:hover + .mega-nav_dropdown-list,
+.mega-nav_dropdown-list:hover,
+.w-dropdown.w--open .mega-nav_dropdown-list {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Dropdown items hover effect */
+.mega-nav_link-item {
+  transition: all 0.3s ease !important;
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.mega-nav_link-item:hover {
+  background: rgba(0, 255, 136, 0.1) !important;
+  transform: translateX(8px) !important;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2) !important;
+}
+
+/* Icon animation in dropdown */
+.mega-nav_link-item .icon {
+  transition: all 0.3s ease !important;
+}
+
+.mega-nav_link-item:hover .icon {
+  transform: rotate(10deg) scale(1.1) !important;
+  color: #00ff88 !important;
+}
+
+/* Dropdown caret animation */
+.nav-caret {
+  transition: transform 0.3s ease !important;
+}
+
+.w-dropdown.w--open .nav-caret {
+  transform: rotate(180deg) !important;
+}
+
+/* Eyebrow text in dropdown */
+.eyebrow {
+  color: #00ff88 !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+}
+
+/* Card link in dropdown */
+.card-link.is-inverse {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 123, 255, 0.1)) !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+  transition: all 0.4s ease !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.card-link.is-inverse::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
+  transition: left 0.5s ease !important;
+}
+
+.card-link.is-inverse:hover::before {
+  left: 100% !important;
+}
+
+.card-link.is-inverse:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3) !important;
+  border-color: #00ff88 !important;
+}
+
+/* Button in dropdown */
+.text-button.is-secondary {
+  transition: all 0.3s ease !important;
+}
+
+.text-button.is-secondary:hover {
+  color: #00ff88 !important;
+  transform: translateX(4px) !important;
+}
+
+.text-button.is-secondary .button_icon {
+  transition: transform 0.3s ease !important;
+}
+
+.text-button.is-secondary:hover .button_icon {
+  transform: translateX(4px) !important;
+}
+
+/* Mobile menu improvements */
+@media screen and (max-width: 991px) {
+  .nav_mobile-menu-button {
+    transition: all 0.3s ease !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .nav_mobile-menu-button:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.1) !important;
+  }
+
+  .nav_mobile-menu-button .icon {
+    transition: transform 0.3s ease !important;
+  }
+
+  .w-nav-button.w--open .icon {
+    transform: rotate(90deg) !important;
+  }
+
+  /* Mobile menu slide animation */
+  .nav_menu {
+    transform: translateX(-100%) !important;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  }
+
+  .w-nav-button.w--open ~ .nav_menu {
+    transform: translateX(0) !important;
+  }
+
+  /* Mobile dropdown styling */
+  .mega-nav_dropdown-list {
+    position: relative !important;
+    margin-top: 8px !important;
+    padding: 16px !important;
+  }
+}
+
+/* Sticky navigation on scroll */
+.nav.is-sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  animation: slideDown 0.4s ease !important;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%) !important;
+  }
+  to {
+    transform: translateY(0) !important;
+  }
+}
+
+/* Smooth scroll offset for fixed nav */
+section {
+  scroll-margin-top: 80px !important;
+}
+
+/* Enhanced focus states for accessibility */
+.nav_link:focus,
+.mega-nav_link-item:focus,
+.nav_mobile-menu-button:focus {
+  outline: 2px solid #00ff88 !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading animation for dropdown content */
+.mega-nav_dropdown-list-wrapper {
+  animation: fadeIn 0.3s ease !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0 !important;
+  }
+  to {
+    opacity: 1 !important;
+  }
+}
+
+/* Glassmorphism effect enhancement */
+.nav_container {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(15px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+}
+
+/* Text color improvements */
+.text-block-2,
+.text-block-3 {
+  color: rgba(255, 255, 255, 0.95) !important;
+  transition: color 0.3s ease !important;
+}
+
+.nav_link:hover .text-block-2,
+.nav_link:hover .text-block-3 {
+  color: #00ff88 !important;
+}
