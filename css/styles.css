@@ -9333,3 +9333,67 @@ img {
     font-size: 15px !important;
   }
 }
+
+/* Restore card animations on mobile */
+@media screen and (max-width: 767px) {
+  /* Re-enable sticky card animations */
+  .ix_sticky-card {
+    position: sticky !important;
+    top: 80px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Re-enable backdrop filter for animated cards */
+  .ix_backdrop-filter-blur .backdrop-filter_blur {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  /* Smooth transitions for cards */
+  .card,
+  .card_body,
+  .ix_sticky-card {
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  /* Hover effects on mobile (tap) */
+  .card-link:active,
+  .card:active {
+    transform: scale(0.98) !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  /* Fade-in animation for cards */
+  .card,
+  .ix_sticky-card {
+    animation: fadeInUp 0.6s ease-out !important;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger animation delays for multiple cards */
+  .ix_sticky-card.is-card-1 {
+    animation-delay: 0.1s !important;
+  }
+
+  .ix_sticky-card.is-card-2 {
+    animation-delay: 0.2s !important;
+  }
+
+  .ix_sticky-card.is-card-3 {
+    animation-delay: 0.3s !important;
+  }
+
+  .ix_sticky-card.is-card-4 {
+    animation-delay: 0.4s !important;
+  }
+}
