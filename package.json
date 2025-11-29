@@ -1,0 +1,13 @@
+{
+  "name": "melberk-agency-website",
+  "version": "1.0.0",
+  "description": "Website for Melberk Agency",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "dev": "serve"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
